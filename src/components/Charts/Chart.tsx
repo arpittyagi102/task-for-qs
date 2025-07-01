@@ -4,6 +4,7 @@ import { Line } from 'react-chartjs-2'
 import type { Ranking } from '@/lib/types'
 import { chartOptions } from './chartConfig'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Alert } from 'flowbite-react';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -35,7 +36,7 @@ export default function Chart({ uniRankingData }: ChartProps) {
             {uniRankingData.length > 0 ? (
                 <Line data={chartData} options={chartOptions} height={320} />
             ) : (
-                <div className="text-gray-500 text-center">No ranking data available.</div>
+                <Alert color="warning" className="text-center">No ranking data available.</Alert>
             )}
         </div>
     );

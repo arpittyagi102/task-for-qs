@@ -1,8 +1,9 @@
 import type { University } from '@/lib/types';
+import { Card, Button } from 'flowbite-react';
 
 export default function Profile({ uniName, uniDetails }: ProfileProps) {
     return (
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl py-5 lg:py-10 px-6 border border-white/20">
+        <Card className="bg-profile rounded-xl py-5 lg:py-10 px-6 border border-white/20">
             <h3 className="text-xl font-semibold text-blue-200 mb-4 text-center">
                 {uniName}
             </h3>
@@ -13,11 +14,11 @@ export default function Profile({ uniName, uniDetails }: ProfileProps) {
                     <div
                         className='uniDescription'
                         dangerouslySetInnerHTML={{ __html: uniDetails.description }}
-                        />
-                    <p className="mt-2 text-blue-300">{uniDetails.country}</p>
+                    />
+                    <Button className="mt-2 border bg-blue-900">{uniDetails.country}</Button>
                 </div>
             )}
-        </div>
+        </Card>
     );
 }
 

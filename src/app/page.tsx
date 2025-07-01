@@ -15,12 +15,12 @@ export default async function Page() {
             <section className="flex-1 border-grid flex items-stretch justify-center">
                 <div className="container flex flex-col lg:flex-row items-stretch gap-6 px-4 py-6">
                     {/* University Info Section */}
-                    <div className="w-full lg:w-2/3 mb-6 lg:mb-0">
+                    <div className="w-full mb-6 lg:mb-0 flex-2">
                         <Profile uniName={university?.name || ""} uniDetails={university} />
                     </div>
 
                     {/* Chart Section */}
-                    <div className="w-full lg:w-1/3">
+                    <div className="w-full flex-1">
                         <Chart uniRankingData={rankings} />
                     </div>
                 </div>

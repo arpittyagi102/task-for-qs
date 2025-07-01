@@ -21,12 +21,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                    <div className="min-h-screen h-full bg-gradient-to-br from-[#110f2b] via-[#300c4c] to-[#270a3e] text-white">
-                        <div id="somesome" className="rainbow-gradient-circle"></div>
-                        <div className="rainbow-gradient-circle theme-pink"></div>
-                        {/* <Header /> */}
-                        {children}
-                    </div>
+                <div className="min-h-screen h-full bg-gradient">
+                    {/* <div className="min-h-screen h-full bg-gradient-to-br from-[#110f2b] via-[#300c4c] to-[#270a3e] text-white"> */}
+                    <div id="somesome" className="rainbow-gradient-circle"></div>
+                    <div className="rainbow-gradient-circle theme-pink"></div>
+                    {/* <Header /> */}
+                    {children}
+                </div>
             </body>
         </html>
     );

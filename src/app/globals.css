@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+@import "flowbite";
 
 :root {
   --background: #ffffff;
@@ -25,17 +28,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.bg-gradient {
+  background-image: linear-gradient(
+    to bottom right,
+    #110f2b,
+    /* from */ #300c4c,
+    /* via */ #270a3e /* to */
+  );
+}
+
+.bg-profile {
+  background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+  backdrop-filter: blur(16px); /* backdrop-blur-lg */
+  -webkit-backdrop-filter: blur(16px); /* Safari support */
+}
+
 .rainbow-gradient-circle {
   position: fixed;
   left: -400px;
   top: 250px;
   right: auto;
   bottom: auto;
-  z-index: 0 ;
+  z-index: 0;
   width: 700px;
   height: 700px;
   border-radius: 1000px;
-  background-image: linear-gradient( 90deg, rgba(70,66,159,1), rgba(187,43,107,1));
+  background-image: linear-gradient(
+    90deg,
+    rgba(70, 66, 159, 1),
+    rgba(187, 43, 107, 1)
+  );
   opacity: 0.16;
   -webkit-filter: blur(100px);
   filter: blur(100px);
@@ -45,7 +67,11 @@ body {
   top: 0px;
   right: -400px;
   bottom: auto;
-  background-image: linear-gradient( 90deg, rgba(70,66,159,1) 25%, rgba(187,43,107,1));
+  background-image: linear-gradient(
+    90deg,
+    rgba(70, 66, 159, 1) 25%,
+    rgba(187, 43, 107, 1)
+  );
 }
 
 .uniDescription {

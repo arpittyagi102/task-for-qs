@@ -1,11 +1,18 @@
-// tailwind.config.mjs
 /** @type {import('tailwindcss').Config} */
-export default config = {
+const config = async () => ({
     content: [
         './src/**/*.{js,ts,jsx,tsx}',
+        './node_modules/flowbite-react/**/*.js',
+        './node_modules/flowbite/**/*.js',
     ],
     theme: {
-        extend: {},
+        theme: {
+            extend: {}, 
+        },
     },
-    plugins: [],
-};
+    plugins: [
+        (await import('flowbite/plugin')).default,
+    ],
+});
+
+export default config;
